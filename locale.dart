@@ -22,7 +22,7 @@ class T {
   static var no = {'ko': '아니오', 'en': 'No'};
 }
 
-String t(Map<String, String> obj) {
+String t(Map<String, dynamic> obj) {
   if (I18n.locale == null) return 'locale is null';
   return obj[I18n.locale];
 }
