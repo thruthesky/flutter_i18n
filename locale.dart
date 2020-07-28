@@ -6,6 +6,10 @@ class I18n {
   /// [locale]
   static String locale;
 
+  /// [forceLocale] 이 값이 설정되어져 있으면, 해당 언어로만 표시를 한다.
+  /// 예) 'en', 'ko'
+  static String forceLocale;
+
   /// 앱이 부팅 될 때, 이 함수를 한번 호출 해 주어야 한다.
   static init() async {
     // List languages = await Devicelocale.preferredLanguages;
@@ -23,6 +27,12 @@ class T {
 }
 
 String t(Map<String, dynamic> obj) {
-  if (I18n.locale == null) return 'locale is null';
-  return obj[I18n.locale];
+  String locale;
+  if (I18n.forceLocale != null)
+    locale = I18n.forceLocale;
+  else {
+    if (I18n.locale == null) return 'locale is null';
+    locale = I18n.locale;
+  }
+  return obj[locale];
 }
