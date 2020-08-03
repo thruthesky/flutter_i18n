@@ -8,6 +8,10 @@ class I18n {
 
   /// [forceLocale] 이 값이 설정되어져 있으면, 해당 언어로만 표시를 한다.
   /// 예) 'en', 'ko'
+  /// @example
+  /// ``` dart
+  /// I18n.forceLocale = 'ko';
+  /// ```
   static String forceLocale;
 
   /// 앱이 부팅 될 때, 이 함수를 한번 호출 해 주어야 한다.
