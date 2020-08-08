@@ -4,6 +4,9 @@ import 'package:devicelocale/devicelocale.dart';
 ///
 class I18n {
   /// [locale]
+  /// ``` dart
+  /// I18n.locale;
+  /// ```
   static String locale;
 
   /// [forceLocale] 이 값이 설정되어져 있으면, 해당 언어로만 표시를 한다.
