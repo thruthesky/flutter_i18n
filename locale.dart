@@ -41,5 +41,5 @@ String t(Map<String, dynamic> obj) {
     if (I18n.locale == null) return 'locale is null';
     locale = I18n.locale;
   }
-  return obj[locale];
+  return obj[locale] ?? '@no-translation';
 }
