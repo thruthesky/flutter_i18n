@@ -34,13 +34,13 @@ class I18n {
 //   static var no = {'ko': '아니오', 'en': 'No'};
 // }
 
-String t(Map<String, dynamic> obj) {
-  String locale;
-  if (I18n.forceLocale != null)
-    locale = I18n.forceLocale;
-  else {
-    if (I18n.locale == null) return 'locale is null';
-    locale = I18n.locale;
-  }
-  return obj[locale] ?? '@no-translation';
-}
+// String t(Map<String, dynamic> obj) {
+//   String locale;
+//   if (I18n.forceLocale != null)
+//     locale = I18n.forceLocale;
+//   else {
+//     if (I18n.locale == null) return 'locale is null';
+//     locale = I18n.locale;
+//   }
+//   return obj[locale] ?? '@no-translation';
+// }
